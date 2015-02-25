@@ -24,17 +24,17 @@ check_ret() {
 checkout_server() {
     message $COLOR_TITLE "Checkout server"
 
-    git clone git@github.com:ceph/calamari.git
+    git clone https://github.com/ceph/calamari.git
     check_ret
 
-    git clone git@github.com:ceph/Diamond.git --branch=calamari
+    git clone https://github.com/ceph/Diamond.git --branch=calamari
     check_ret
 
     cd calamari/vagrant/precise-build
 }
 
 checkout_client() {
-    git clone git@github.com:ceph/calamari-clients.git
+    git clone https://github.com/ceph/calamari-clients.git
     check_ret
 
     cd calamari-clients/vagrant/precise-build
